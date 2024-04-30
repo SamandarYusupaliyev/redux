@@ -27,6 +27,7 @@ function Navbar() {
 
   return(
     <div className="bg-base-300 duration-300 transition ">
+
     <div className="navbar align-element justify-around">
       <div className="navbar-start">
         <Link to ="/" className="btn text-[30px] btn-primary lg:btn-lg hidden lg:flex ">C</Link>
