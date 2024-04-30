@@ -2,11 +2,30 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Navbar() {
+  const [theme,setTheme] =useState(darkModeFromLocalStoage)
+  const handleClick =() =>{
+    const newTheme =theme==themes.winter ? themes.dracula:themes.winter
+    setTheme(newTheme)
+    localStorage.setItem("mode",newTheme)
+  }
+  useEffect(()=>{
+    document.documentElement.setAttribute("data-theme",theme)
+  },[theme])
+
+
+  const {dispatch} =useContext(GlobalContext)
+  const changeColor =(color )=>{
+    dispatch({
+      type:"CHANGE_NAVBAR_BG",
+      payload:color,
+    })
+  }
+
   return(
     <div className="bg-base-300 duration-300 transition ">
     <div className="navbar align-element justify-around">
       <div className="navbar-start">
-        <Link to ="/" className="btn btn-primary lg:btn-lg hidden lg:flex ">C</Link>
+        <Link to ="/" className="btn text-[30px] btn-primary lg:btn-lg hidden lg:flex ">C</Link>
       </div>
         <div className='gap-5'>
           <label className="swap swap-rotate items-center ">
