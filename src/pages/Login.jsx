@@ -19,8 +19,9 @@ function Login() {
       <input type="password" placeholder="password" className="input input-bordered" required />
     </div>
     <div className="form-control mt-6">
-      <button className="btn btn-primary mb-3">Register</button>
-        <p className="text-center">Already a member? 
+      <button className="btn btn-primary mb-3">Login</button>
+      <button className="btn btn-secondary mb-3">GUEST USER </button>
+        <p className="text-center -mf-3">Already a member? 
           <Link className="link link-hover  text-blue-600" to="/register">
           Register
         </Link>
