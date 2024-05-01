@@ -1,8 +1,10 @@
-import { Link,Form } from "react-router-dom"
+import { Link } from "react-router-dom"
+import { Form } from "react-router-dom"
+import { FormInput } from "../components/FormInput"
 
 function Register() {
   return(
-       <div className="flex justify-center items-center mt-[100px]">
+       <div className="h-screen grid place-content-center">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
       <form className="card-body">
         <div className="form-control">
@@ -10,7 +12,7 @@ function Register() {
           <label className="label">
             <span className="label-text">Username</span>
           </label>
-          <input type="email" placeholder="username" className="input input-bordered" required />
+          <FormInput type="email" placeholder="username" className="input input-bordered" required />
           <label className="label">
             <span className="label-text">Email</span>
           </label>
@@ -20,7 +22,7 @@ function Register() {
           <label className="label">
             <span className="label-text">Password</span>
           </label>
-          <input type="password" placeholder="password" className="input input-bordered" required />
+          <FormInput type="password" placeholder="password" className="input input-bordered" required />
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary mb-3">Register</button>
