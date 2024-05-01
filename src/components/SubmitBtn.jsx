@@ -1,15 +1,22 @@
-import { useNavigate } from "react-router-dom"
+import { useNavigation } from "react-router-dom"
 
-function SubmitBtn() {
-    const navigation =useNavigate();
-    const isSubmitting =navigation.state=="submitting"
+function SubmitBtn({text}) {
+    const navigation =useNavigation();
+    const isSubmitting =navigation.state =="submitting"
   return (
-    <button 
-    type="submit"
-    className="btn btn-primary btn-block"
-    disabled={isSubmitting}
+    <button
+      type="submit"
+     className="btn btn-primary btn-block"
+     disabled ={isSubmitting}
     >
-    {isSubmitting}
+    {isSubmitting ?(
+        <>
+          <span className="loading loading-spinner"></span>
+          sending...
+        </>
+    ):(
+       text || "Submit"
+    )}
     </button>
   )
 }

@@ -1,35 +1,35 @@
-import { Link,Form } from "react-router-dom"
+import {Form,Link}  from "react-router-dom"
 import {FormInput,SubmitBtn} from "../components/FormInput"
 
 function Login() {
   return (
     <div className="h-screen grid place-content-center">
-    <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 ">
-  <form className="card-body">
+  <Form className="card w-96 p-8 bg-base-100 shadow-lg flex flex-col gap-y-4">
+    method="post"
     <div className="form-control">
-      <h1 className="text-3xl font-bold text-center mb-4">Login</h1>
-      <label className="label">
-        <span className="label-text">Email:</span>
-      </label>
-      <FormInput type="email" name="email"  defaultavlue ="test@gmail.com" />
+      <h4 className="text-3xl font-bold text-center mb-4">Login</h4>
+      <FormInput 
+      type="email" 
+      label="Email:"
+      name="email"  
+      defaultavlue ="test@gmail.com" />
     </div>
-    <div className="form-control">
-      <label className="label">
-        <span className="label-text">Password:</span>
-      </label>
-      <FormInput type="password" name="password" defaultavlue ="secret" />
+      <FormInput 
+      type="password" 
+      label="Password:"
+      name="password" 
+      defaultavlue ="secret"/>
+    <div className="form-control mt-4">
+       <SubmitBtn text="Login"/>
     </div>
-    <div className="form-control mt-6">
-      <button className="btn btn-primary mb-3">Login</button>
-      <button className="btn btn-secondary mb-3">GUEST USER </button>
-        <p className="text-center -mf-3">Already a member? 
-          <Link className="link link-hover  text-blue-600" to="/register"> {" "}
+      <button type="button" className="btn btn-secondary btn-block">Guset User</button>
+        <p className="text-center">Already a member? 
+          <Link className="link link-hover capitalize  text-blue-600" to="/register"> 
+          {" "}
           Register
         </Link>
         </p>
-    </div>
-  </form>
-</div>
+  </Form>
 </div>
 )
 }
