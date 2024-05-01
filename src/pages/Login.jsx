@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom"
-import { Form } from "react-router-dom"
-import {FormInput} from "../components/FormInput"
+import { Link,Form } from "react-router-dom"
+import {FormInput,SubmitBtn} from "../components/FormInput"
 
 function Login() {
   return (
@@ -12,19 +11,19 @@ function Login() {
       <label className="label">
         <span className="label-text">Email:</span>
       </label>
-      <FormInput type="email" name="email" de className="input input-bordered" required />
+      <FormInput type="email" name="email"  defaultavlue ="test@gmail.com" />
     </div>
     <div className="form-control">
       <label className="label">
         <span className="label-text">Password:</span>
       </label>
-      <FormInput type="password"  className="input input-bordered" required />
+      <FormInput type="password" name="password" defaultavlue ="secret" />
     </div>
     <div className="form-control mt-6">
       <button className="btn btn-primary mb-3">Login</button>
       <button className="btn btn-secondary mb-3">GUEST USER </button>
         <p className="text-center -mf-3">Already a member? 
-          <Link className="link link-hover  text-blue-600" to="/register">
+          <Link className="link link-hover  text-blue-600" to="/register"> {" "}
           Register
         </Link>
         </p>
