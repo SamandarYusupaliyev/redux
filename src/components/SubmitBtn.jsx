@@ -6,7 +6,7 @@ function SubmitBtn({text}) {
   return (
     <button
       type="submit"
-     className="btn btn-primary btn-block"
+     className="btn btn-primary  btn-block capitalize"
      disabled ={isSubmitting}
     >
     {isSubmitting ?(
@@ -15,7 +15,7 @@ function SubmitBtn({text}) {
           sending...
         </>
     ):(
-       text || "Submit"
+       text || "submit"
     )}
     </button>
   )
