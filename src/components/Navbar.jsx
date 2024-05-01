@@ -33,7 +33,7 @@ function Navbar() {
         <Link to ="/" className="btn btn-primary lg:btn-lg hidden lg:flex ">C</Link>
       </div>
         <div className='gap-5'>
-          <label className="swap swap-rotate items-center ">
+          <label className="swap swap-rotate items-center">
             <input type="checkbox"
               onClick={handleClick}/>
             {/* sun icon */}
