@@ -26,9 +26,9 @@ function Register() {
         defaultavlue ="test@gmail.com"
          />
         <FormInput 
-        type="email" 
-        label="Email:"
-        name="email"  
+        type="password" 
+        label="Password:"
+        name="password"  
         defaultavlue ="secret"
          />
       </div>

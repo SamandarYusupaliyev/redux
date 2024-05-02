@@ -7,7 +7,7 @@ function Header() {
             {/* User */}
             {/* Links */}
             <div className="flex gap-x-6 justify-center items-center sm:justify-end">
-                <Link to="/login" className="link link-hover text-xs sm:textsm">Sign in Guest</Link>
+                <Link to="/login" className="link link-hover text-xs sm:textsm">Sign in/ Guest</Link>
                 <Link to="/register" className="link link-hover text-xs sm:textsm">Create an Account</Link>
             </div>
       </div>

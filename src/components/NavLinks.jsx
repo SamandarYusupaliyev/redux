@@ -1,4 +1,4 @@
-import React from 'react'
+import { NavLink } from "react-router-dom"
 
 const links=[
     {
@@ -39,9 +39,11 @@ function NavLinks() {
     <>
        {links.map((link=>{
          return(
-         <NavLinks className="capitalize" key ={link.id} to={link.url}>
-            {link.text}
-         </NavLinks>
+           <li>
+             <NavLinks className="capitalize" key ={link.id} to={link.url}>
+              {link.text}
+             </NavLinks>
+           </li>
          )
        }))}
     </>
