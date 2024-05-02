@@ -10,10 +10,10 @@ function Hero() {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
         <div>
-            <h1 className="max-w-2xl text-4xl font-bold tracking-tightm sm:text-6xl">
+            <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">
               We are changing the way people shop
             </h1>
-            <p className="mt-8 max-w-2xl text-lg loading-8">
+            <p className="mt-8 max-w-2xl text-lg leading-7 ">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
               Tempora reprehenderit voluptatum deleniti doloremque magni eius debitis, asperiores nesciunt facere amet!
             </p>
@@ -21,7 +21,7 @@ function Hero() {
                 <Link to="/products" className="btn btn-primary">Our Products</Link>
             </div>
         </div>
-        <div className="hiddin h-[28rem] lg:carousel-center p-4 space-x-4 bg-neutral rounded-box">
+        <div className="hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box">
             {carouselImages.map((image)=>{
                 return (
                 <div key={image} className="carousel-item">
