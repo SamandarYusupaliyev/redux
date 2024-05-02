@@ -1,13 +1,14 @@
 function About() {
   return (
-    <div>
-       <div>
-        <h1 className="text-3xl font-bold">We love</h1>
+    <div className="flex justify-center items-center flex-col pt-14 ">
+       <div className="flex items-center gap-5">
+        <h1 className=" text-6xl font-bold tracking-tight mb-5 mt-5">We love</h1>
+        <div className="bg-primary rounded-box w-40 h-16 text-center  pt-3 pb-3 text-4xl font-bold text-slate-200">comfy </div>
        </div>
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-      Eos perferendis fugit assumenda, cupiditate incidunt ipsa fuga voluptates culpa deleniti dolore quam magnam et minima similique delectus voluptate veritatis. 
-      Itaque hic nobis quibusdam incidunt tempore vero, accusamus, alias earum quaerat totam obcaecati pariatur. 
-      Aperiam vero magni atque quod sunt eum culpa.
+      <p className="max-w-xl text-lg leading-8 text-center">
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+       Tempore quae quam blanditiis vitae, dolor non eveniet ipsum voluptatibus, quia optio aut! Perferendis ipsa cumque ipsam nostrum reprehenderit ad illo sed officiis ea tempore! 
+       Similique eos minima sit porro, ratione aspernatur!
       </p>
   </div>
   )
