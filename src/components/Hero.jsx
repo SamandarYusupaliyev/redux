@@ -25,7 +25,7 @@ function Hero() {
             {carouselImages.map((image)=>{
                 return (
                 <div key={image} className="carousel-item">
-                  <img className="rounded-box h-full w-80 object-cover" src={image} alt="" />
+                  <img className="rounded-box h-full w-80 object-cover" src={image} />
                 </div>
                 )
             })}
