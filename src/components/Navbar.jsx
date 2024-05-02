@@ -37,7 +37,7 @@ function Navbar() {
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <FaBarsStaggered className="h-6 w-6"/>
-          </label>
+            </label>
            <ul tabIndex={0} className=" menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-200 rounded-box w-52">
               <NavLinks/>
            </ul>
