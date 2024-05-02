@@ -14,8 +14,8 @@ function Hero() {
               We are changing the way people shop
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-7 ">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-              Tempora reprehenderit voluptatum deleniti doloremque magni eius debitis, asperiores nesciunt facere amet!
+             Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+             Tempore repellat explicabo enim soluta temporibus asperiores aut obcaecati perferendis porro nobis.
             </p>
             <div className="mt-10">
                 <Link to="/products" className="btn btn-primary">Our Products</Link>
