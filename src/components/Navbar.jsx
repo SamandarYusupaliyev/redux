@@ -43,7 +43,7 @@ function Navbar() {
            </ul>
           </div>
        </div>
-       <div className="navbar-center">
+       <div className="navbar-center hidden lg:flex">
          <ul>
             <NavLinks className=""/>
          </ul>
