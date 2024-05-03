@@ -8,7 +8,7 @@ const carouselImages =[hero1,hero2,hero3,hero4]
 
 function Hero() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center ">
         <div>
             <h1 className="max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl">
               We are changing the way people shop
@@ -32,7 +32,7 @@ function Hero() {
         </div>
         <div>
           <h3 className="max-w-2xl text-3xl font-semibold mb-6">Featured Products</h3>
-          <div className="w-full h-[1px] bg-red-500"></div>
+          <div className="w-full h-[1px]  bg-slate-200 "></div>
        </div>
     </div>
   )
