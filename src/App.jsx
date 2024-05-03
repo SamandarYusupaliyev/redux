@@ -23,7 +23,7 @@ function App() {
         {
           index:true,
           element:<Landing/>,
-          element:<ErrorElement/>,
+          errorElement:<ErrorElement/>,
           loader:Landingloader,
         },
         {
