@@ -3,7 +3,7 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom"
 // pages
 import {
 About,HomeLayout,Error,Checkout,Cart,
-Orders,Products,Login,Landing,SingleRroduct,Error,
+Orders,Products,Login,Landing,SingleRroduct,
 Register} from "./pages"
 
 // components
