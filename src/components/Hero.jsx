@@ -32,7 +32,7 @@ function Hero() {
         </div>
         <div>
           <h3 className="max-w-2xl text-3xl font-semibold mb-6">Featured Products</h3>
-          <div className="w-full h-[1px]  bg-slate-200 "></div>
+          <div className="border-b border-base-300"></div>
        </div>
     </div>
   )
