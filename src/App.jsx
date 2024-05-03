@@ -3,8 +3,14 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom"
 // pages
 import {
 About,HomeLayout,Error,Checkout,Cart,
-Orders,Products,Login,Landing,SingleRroduct,
+Orders,Products,Login,Landing,SingleRroduct,Error,
 Register} from "./pages"
+
+// components
+import {ErrorElement} from "./components"
+
+// loaders
+import {loader as Landingloader} from "./pages/Landing"
 
 
 function App() {
@@ -16,7 +22,9 @@ function App() {
       children:[
         {
           index:true,
-          element:<Landing/>
+          element:<Landing/>,
+          element:<ErrorElement/>,
+          loader:Landingloader,
         },
         {
           path:"/about",
