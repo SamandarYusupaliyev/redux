@@ -4,7 +4,7 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom"
 import {
 About,HomeLayout,Error,Checkout,Cart,
 Orders,Products,Login,Landing,SingleRroduct,
-Register} from "./pages"
+Register} from "./pages"   
 
 // components
 import {ErrorElement} from "./components"

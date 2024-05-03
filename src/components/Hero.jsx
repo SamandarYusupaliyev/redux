@@ -30,9 +30,6 @@ function Hero() {
                 )
             })}
         </div>
-        <div>
-          <div className="border-b border-base-300"></div>
-       </div>
     </div>
   )
 }
