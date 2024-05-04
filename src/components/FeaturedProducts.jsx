@@ -1,11 +1,12 @@
-import React from 'react'
-import { useLoaderData } from 'react-router-dom'
+import ProductsGrid from "./ProductsGrid"
+import SectionTitle from "./SectionTitle"
 
 function FeaturedProducts() {
-    const {products} =useLoaderData();
-    console.log(products);
   return (
-    <div>FeaturedProducts</div>
+    <div className='pt-24'>
+        <SectionTitle/>
+        <ProductsGrid/>
+    </div>
   )
 }
 
