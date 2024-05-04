@@ -5,13 +5,13 @@ function ProductsGrid() {
   const {products}=useLoaderData();
 
   return (
-    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-1">
         {products.map((product)=>{
             console.log(product);
             const {title,price,image}=product.attributes;
             const dollarAmount =formatPrice(price);
             return(
-                <Link className="card w-full shadow hover:shadow-2xl transition duration-300"
+                <Link className="card w-full shadow hover:shadow-2xl transition duration-300 "
                   key={product.id}
                   to={`/products/${product.id}`}
                 >
