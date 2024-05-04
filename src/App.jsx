@@ -3,7 +3,7 @@ import { createBrowserRouter,RouterProvider } from "react-router-dom"
 // pages
 import {
 About,HomeLayout,Error,Checkout,Cart,
-Orders,Products,Login,Landing,SingleRroduct,
+Orders,Products,Login,Landing,SingleProduct,
 Register,} from "./pages"   
 
 // components
@@ -37,7 +37,7 @@ function App() {
         },
         {
           path:"/product/:id",
-          element:<SingleRroduct/>,
+          element:<SingleProduct/>,
           loader:SingleProductLoader,
         },
         {
