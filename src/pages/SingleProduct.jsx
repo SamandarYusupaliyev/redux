@@ -3,7 +3,7 @@ import { customFetch, formatPrice } from "../utils"
 import { useState } from "react"
 
 export const loader = async ({params}) => {
-  const request = await customFetch(`/products/${params.id}`);
+  const request = await customFetch(`/product/${params.id}`);
   return {product: request.data.data};
 }
 
