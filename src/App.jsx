@@ -10,7 +10,7 @@ Register,} from "./pages"
 import {ErrorElement} from "./components"
 
 // loaders
-import {loader as Landingloader} from "./pages/Landing"
+import {loader as LandingLoader} from "./pages/Landing"
 import {loader as SingleProductLoader} from "./pages/SingleRroduct"
 
 
@@ -25,7 +25,7 @@ function App() {
           index:true,
           element:<Landing/>,
           errorElement:<ErrorElement/>,
-          loader:Landingloader,
+          loader:LandingLoader,
         },
         {
           path:"/about",
