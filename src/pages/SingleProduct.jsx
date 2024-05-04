@@ -13,7 +13,7 @@ function SingleProduct() {
   const dollarAmount = formatPrice(price)
   const [productColor , setProductColor ] = useState(colors[0])
   return (
-    <section className="align-content">
+    <section className="align-content py-20">
       <div className="text-md breadcrumbs">
         <ul>
           <li>
