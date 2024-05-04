@@ -1,8 +1,9 @@
-import { Link, useLoaderData } from "react-router-dom"
+import {useLoaderData,Link } from "react-router-dom"
 import {formatPrice} from "../utils"
 
 function ProductsGrid() {
-    const {products}=useLoaderData();
+  const {products}=useLoaderData();
+
   return (
     <div className="pt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         {products.map((product)=>{
@@ -17,7 +18,7 @@ function ProductsGrid() {
                  <figure className="px-4 pt-4">
                     <img className="rounded-xl h-64 md:h-48 w-full object-cover" 
                     src={image} 
-                    alt={title} />
+                    alt={title}/>
                  </figure>
                    <div className="card-body items-center text-center">
                       <h2 className="card-title capitalize tracking-wider">{title}</h2>
