@@ -5,8 +5,8 @@ function Header() {
     <header className="bg-neutral py-2 text-neutral-content">
       <div className="align-content flex justify-center sm:justify-end">
         <div className="flex gap-x-2 sm:gap-x-8 items-center">
-          <p className="text-xs sm:text-sm"></p>
-          <button className="btn btn-xs btn-outline btn-primary"></button>
+          <p className="text-xs sm:text-sm">"Hello ," "demo user"</p>
+          <button className="btn btn-xs btn-outline btn-primary">Logout</button>
         </div>
             {/* User */}
             {/* Links */}
