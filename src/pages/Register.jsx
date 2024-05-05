@@ -9,15 +9,15 @@ function Register() {
         <h4 className="text-3xl font-bold text-center mb-4">Register</h4>
         <FormInput 
         type="text" 
-        label="Display Name:"
-        name="displayName"
-        defaultvalue="user" 
+        label="Username:"
+        name="username"
+        // defaultvalue="user" 
         />
          <FormInput 
         type="url" 
         label="Photo URL:"
         name="photoURL"
-        defaultvalue="https://..." 
+        // defaultvalue="https://..." 
         />
         <FormInput 
         type="email" 
