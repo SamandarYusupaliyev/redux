@@ -1,10 +1,10 @@
-function FormInput({name,type,label,defaultvalue}){
+function FormInput({name,type,label,defaultvalue,size}){
     return (
       <div className="form-control">
            <label className="w-full">
               <div className="label">
                 <span className="label-text capitalize">
-                    {label}
+                   {label}
                 </span>
               </div>
               <input 
@@ -12,7 +12,7 @@ function FormInput({name,type,label,defaultvalue}){
               name={name} 
               placeholder="Type here"
               defaultValue={defaultvalue}
-              className="input input-bordered w-full"
+              className={`input input-bordered w-full ${size}`}
               />
            </label>
       </div>
