@@ -1,4 +1,4 @@
-import Filter from "../components/Filter";
+import Filter from "../components/Filters";
 import ProductsContainer from "../components/ProductsContainer";
 import { customFetch } from "../utils";
 const url = '/products'
@@ -12,7 +12,7 @@ export const loader = async ({ request }) => {
 
 const Products = () => {
   return(
-  <div className="mt-14">
+  <div className="align-content py-20">
     <Filter />
     <ProductsContainer />
     </div>
