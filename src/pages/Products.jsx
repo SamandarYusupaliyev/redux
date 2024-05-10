@@ -17,8 +17,8 @@ export const loader = async ({ request }) => {
 };
 function Products() {
   return (
-    <div className="align-content mt-14">
-      <Filters />
+    <div className="align-content py-20">
+      <Filters/>
       <ProductsContainer />
       <PaginationContainer />
     </div>
