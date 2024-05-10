@@ -2,7 +2,6 @@ import { useLoaderData , Link } from "react-router-dom"
 import { customFetch, formatPrice } from "../utils"
 import { useState } from "react"
 
-import { customFetch, formatPrice } from "../utils"
 import { generateAmountOptions } from "../utils"
 
 import { useDispatch } from "react-redux"
