@@ -2,6 +2,7 @@ import { useLoaderData , Link } from "react-router-dom"
 import { customFetch, formatPrice } from "../utils"
 import { useState } from "react"
 
+import { customFetch, formatPrice } from "../utils"
 import { generateAmountOptions } from "../utils"
 
 import { useDispatch } from "react-redux"
@@ -9,7 +10,7 @@ import { addItem } from "../features/cart/cartSlice"
 
 
 export const loader = async (params) => {
-  const request = await customFetch(`/products/${params.id}`);
+  const request = await customFetch(`/products/${params.params.id}`);
   return {product: request.data.data};
 }
 

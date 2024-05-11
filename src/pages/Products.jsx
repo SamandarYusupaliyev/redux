@@ -1,27 +1,33 @@
-import ProductsContainer from "../components/ProductsContainer";
+import { Filters, ProductsContainer } from "../components"
+import { Filters, PaginationContainer, ProductsContainer } from "../components"
 import { customFetch } from "../utils";
-import Filters from "../components/Filters";
-import PaginationContainer from "../components/PaginationContainer";
 
 const url = "/products";
 
 export const loader = async ({ request }) => {
   const response = await customFetch(url);
   const params = Object.fromEntries([
-    ...new URL(request.url).searchParams.entries(),
+    ...new URL(request.url).searchParams.entries()
   ]);
-  const responseData = await customFetch(url, { params });
-  const products = responseData.data.data;
-  const meta = responseData.data.meta;
-  return { products, meta };
+  const response = await customFetch(url , {params});
+  const products = response.data.data;
+  const meta = response.data.meta;
+  console.log(products , meta);
+  return { products , meta , }
 };
+
 function Products() {
   return (
-    <div className="align-content py-20">
+    <div className="align-content mt-14">
+      {/* FILTER*/}
       <Filters/>
-      <ProductsContainer />
-      <PaginationContainer />
+      {/* ProductsContainer*/}
+      <ProductsContainer/>
+
+      {/* PaginationContainer*/}
+      <PaginationContainer/>
+
     </div>
-  );
+  )
 }
-export default Products;
+export default Products
