@@ -4,7 +4,7 @@ import { updateProfile } from "firebase/auth";
 import toast from "react-hot-toast";
 
 import { login } from "../features/user/userSlice";
-import { useDispatch, useDispatch } from "react-redux";
+import { useDispatch} from "react-redux";
 
 export function useRegister() {
   const dispatch = useDispatch();
