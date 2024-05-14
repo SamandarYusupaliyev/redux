@@ -20,13 +20,13 @@ import {
 } from "./pages";
 
 // components
-import { ErrorElement } from "./components";
+import { ErrorElement,ProtectedRoutes } from "./components";
 
 // actions
 import { action as RegisterAction } from "./pages/Register";
 
 // redux
-import { userSelector, useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 // firebase
@@ -39,8 +39,10 @@ import { loader as LandingLoader } from "./pages/Landing";
 import { loader as SingleProductLoader } from "./pages/SingleProduct";
 import { loader as ProductsLoader } from "./pages/Products";
 
+
+
 function App() {
-  const { user, authReadyState } = userSelector((state) => state.userState);
+  const { user, authReadyState } = useSelector((state) => state.userState);
   const routers = createBrowserRouter([
     {
       path: "/",
