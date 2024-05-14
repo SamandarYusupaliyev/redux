@@ -40,7 +40,7 @@ import { loader as SingleProductLoader } from "./pages/SingleProduct";
 import { loader as ProductsLoader } from "./pages/Products";
 
 function App() {
-  const { user, authReadyState } = useSelector((state) => state.useState);
+  const { user, authReadyState } = userSelector((state) => state.userState);
   const routers = createBrowserRouter([
     {
       path: "/",
