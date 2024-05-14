@@ -26,7 +26,7 @@ import { ErrorElement } from "./components";
 import { action as RegisterAction } from "./pages/Register";
 
 // redux
-import { useSelector, useDispatch } from "react-redux";
+import { userSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 
 // firebase
