@@ -28,7 +28,7 @@ function SingleProduct() {
     image,
     title,
     price,
-    amount,
+    amount:Number(amount),
     productColor,
     company,
   }

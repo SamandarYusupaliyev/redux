@@ -12,10 +12,10 @@ const defaultState = {
 
 const cartSlice = createSlice({
     name: "cart",
-initialState: defaultState,
-reducers: {
-    addItem:(state , {payload}) => {
-        const { product } = payload;
+    initialState: defaultState,
+    reducers: {
+    addItem:(state, {payload}) => {
+        const {product} = payload;
 
         const item = state.cartItems.find((i) => i.cartID === product.id);
 
@@ -31,12 +31,34 @@ reducers: {
         localStorage.setItem("cart" , JSON.stringify(state));
         toast.success("Item added to curt")
     },
-    clearCart: (state) => {},
-    removeItem: (state , {paylad}) => {},
-    editItem: (state , {paylad}) => {},
+    clearCart: (state) => {
+      localStorage.setItem('cart', JSON.stringify(defaultState));
+    },
+    removeItem: (state , {payload}) => {
+        const {cartID} =payload;
+        const product = state.cartItems.find((i)=>i.cartID === cartID);
+        state.cartItems =state.cartItems.filter((i)=>i.cartID !== cartID);
 
+        state.numItemsInCart -=product.amount;
+        cartSlice.caseReducers.calulateTotols(state);
+        toast.success("Cart updated");
+    },
+    editItem: (state, {payload}) => {
+        const {cartID,amount} =payload;
+        const item =state.cartItems.find((i)=>i.cartID ===cartID);
+        state.numItemsInCart +=amount -item.amount
+        state.cartTotal +=item.price * (amount-item.amount)
+        item.amount =amount;
+        cartSlice.caseReducers.calulateTotols(state);
+        toast.success("Card update");
+    },
+    calulateTotols:(state)=>{
+       state.tax =0.1*state.cartTotal;
+       state.orderTotal =state.cartTotal + state.shipping + state.tax;
+       localStorage.setItem('cart', JSON.stringify(state));
+    },
 },
 });
 
-export const { addItem , clearCart , removeItem , editItem } = cartSlice.actions;
+export const {addItem , clearCart , removeItem , editItem} = cartSlice.actions;
 export default cartSlice.reducer;
