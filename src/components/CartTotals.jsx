@@ -20,7 +20,7 @@ function CartTotals() {
             </p>
              <p className="flex justify-between text-sm mt-4 pb-2">
                  <span>Order Total</span>
-                 <span className="font-medium">{formatPrice(orderTotal)}</span>
+                 <span className="font-medium">{formatPrice(cartTotal)}</span>
              </p>
          </div>
          </div> 
