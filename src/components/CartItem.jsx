@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { formatPrice, generateAmountOptions } from "../utils";
 import { removeItem } from "../features/cart/cartSlice";
+import { editItem } from "../features/cart/cartSlice";
 
 
 function CartItem({cardItem}) {
@@ -12,6 +13,7 @@ function CartItem({cardItem}) {
     const removeItemFromTheCart =()=>{
         dispatch(removeItem({cartID}))
     };
+    console.log(cardItem);
   return (
     <article key={cardItem.cartID} className="mb-12 flex gap-y-4 sm:flex-row flex-wrap boder-b border-base-300 pb-6 last:border-b-0">
         <img src={image} alt={title} className="h-24 w-24 rounded-lg sm:h-32 lg:w-32 object-cover" />
